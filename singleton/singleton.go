@@ -6,7 +6,6 @@ type Interface interface {
 	Function(args []string) string
 }
 
-// 通过对外暴露接口, 防止外部直接创建Singleton对象
 type singleton struct {
 }
 
