@@ -22,7 +22,7 @@ func (*BaseCodeFactory) NewCodec(codec string) CodecInterface {
 	case "gob":
 		return &GobCodec{}
 	default:
-		return &JsonCodec{}
+		return nil
 	}
 }
 
