@@ -6,11 +6,17 @@ import (
 	"strings"
 )
 
+/**
+桥接模式 适用于
+1. 一个类存在两个维度的变化, 并且这两个维度都需要扩展
+2. 当一个系统不希望使用继承, 或者因为多层次的继承关系会导致类的个数急剧增加
+3. 当一个系统需要在组件的抽象化和具体化角色之间增加更多的灵活性时
+*/
 type Driver interface {
 	GetConnection(string)
 }
 
-// 相当于一个接口适配
+// 可以通过适配器模式代替
 type DriverImpl struct {
 	MySqlDriverImpl
 }
